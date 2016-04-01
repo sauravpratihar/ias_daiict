@@ -1,0 +1,355 @@
+/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * @geedmo - Licensed under the MIT license
+ */
+
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+	position: static;
+}
+
+.yamm .container {
+	position: relative;
+}
+
+.yamm .dropdown-menu {
+	left: auto;
+}
+
+.yamm .yamm-content {
+	padding: 20px 30px;
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+	left: 0;
+	right: 0;
+}
+
+.menu, .submenu {
+	position: relative;
+	z-index: 50;
+	margin: 56px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.menu li {
+	position: relative;
+	text-align: left;
+}
+
+.menu li i {
+	margin-right: 7px;
+	color: #ced3d5;
+	text-shadow: 0 1px 0 white;
+}
+
+.navbar-nav a {
+	position: relative;
+	text-decoration: none;
+	color: #646060;
+	font: 14px 'OpenSansRegular';
+	-webkit-transition: none;
+	transition: none;
+}
+
+.navbar-default .navbar-nav > li > a.active {
+	color: #e34735 !important;
+}
+
+.navbar-nav > li {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+.navbar-nav > li:hover:before, .menu a.active:before {
+	height: 2px;
+}
+
+.navbar-nav > li > a {
+	padding: 0 15px;
+	line-height: 80px;
+	color: #484c4f;
+}
+
+.navbar-nav a.active:before {
+	content: '';
+	display: block;
+	height: 0;
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	bottom: -1px;
+	z-index: 53;
+	background: #e34735;
+	-webkit-transition: height 0.2s ease;
+	transition: height 0.2s ease;
+}
+
+.navbar-nav a.active:before {
+	height: 2px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	margin-top: -2px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+
+/*---------------------------------------------------------- Megamenu*/
+
+.dropdown-menu li a {
+	padding: 0 20px;
+	margin: 0 0px;
+	line-height: 0 !important;
+	font-size: 12px;
+	color: #a8acaf;
+	font-family: OpenSansRegular;
+}
+
+.yamm-sm {
+	width: 180px;
+}
+
+.navbar-default .navbar-nav > li i {
+	margin-right: 7px;
+	color: #ced3d5;
+	text-shadow: 0 1px 0 white;
+}
+
+.dropdown-menu {
+	border: none;
+	border-radius: none;
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #f00;
+	border-radius: 0px 0px 2px 2px;
+}
+
+.yamm-content a {
+	padding: 0 5px;
+	margin: 0 15px;
+	line-height: 0 !important;
+	font-size: 12px !important;
+	color: #a8acaf;
+	font-family: OpenSansRegular;
+	position: relative;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #484C4F !important;
+}
+
+.yamm-content a:before {
+	content: "\f0da";
+	font: 11px/23px FontAwesome;
+	color: #5f6368;
+	margin-right: 7px;
+}
+
+.yamm-content a:hover {
+	background: #2eafbb !important;
+	color: #fff !important;
+	font-family: OpenSansSemiboldRegular;
+}
+
+.megamenu li a:hover:before {
+	color: #fff;
+}
+
+.yamm-content a:hover, .dropdown li a:hover {
+	background: #2eafbb !important;
+	color: #fff !important;
+	font-family: OpenSansSemiboldRegular;
+}
+
+.yamm-content .m-submenu a:hover:before {
+	color: #fff;
+}
+
+.yamm-content .m-submenu,.yamm-content .m-submenu:hover {
+	background: url(../img/mmenu-sep.png) no-repeat left top !important;
+}
+
+.yamm-content .mmenu-title {
+	padding: 5px;
+	color: #fff !important;
+	font-size: 14px !important;
+	font-family: OpenSansSemiboldRegular;
+	font-style: normal;
+}
+
+.yamm-content .m-submenu .mmenu-title:hover {
+	background: transparent !important;
+	font-weight: 300 !important;
+	font-family: OpenSansSemiboldRegular;
+}
+
+.yamm-content .m-submenu.first {
+	background: none !important;
+}
+
+.menu li:hover > .yamm-content {
+	visibility: visible;
+}
+
+.yamm-content .m-submenu a, .dropdown li a {
+	height: 15px;
+	border-top: none;
+	border-bottom: none;
+	position: relative;
+	transition: .3s;
+	transition: .3s;
+}
+
+/*---------------------------------------------------------- submenu*/
+
+.submenu {
+	min-width: 180px;
+	position: absolute;
+	top: -1px;
+	left: 100%;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	background: #2f3338;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	border-radius: 0 0 2px 2px;
+	list-style: none;
+}
+
+.menu > li > .submenu {
+	top: 100%;
+	left: 15px;
+}
+
+.menu li:hover > .submenu {
+	visibility: visible;
+}
+
+.submenu li {
+	position: relative;
+	-webkit-transition: background-color 0.2s ease, border 0.2s ease, height 0.3s ease, color 0.2s ease, opacity 0.5s ease;
+	transition: background-color 0.2s ease, border 0.2s ease, height 0.3s ease, color 0.2s ease, opacity 0.5s ease;
+}
+
+.submenu li:hover {
+	background: #e34735;
+	border-top: 1px solid #e34735;
+	border-bottom: 1px solid #e34735;
+}
+
+.submenu li:hover > a {
+	color: #fff;
+}
+
+.submenu a {
+	padding: 0 20px;
+	line-height: 35px;
+	font-size: 12px;
+	color: #a8acaf;
+	text-transform: none;
+	font-family: 'OpenSansRegular';
+	letter-spacing: 0;
+}
+
+.submenu li {
+	height: 15px;
+	border-top: 1px solid #393c42;
+	border-bottom: 1px solid #26292c;
+}
+
+.submenu li:last-child {
+	border-bottom: 0px solid #262829;
+	border-radius: 0 0 2px 2px;
+}
+
+.submenu li i {
+	margin-right: 7px;
+}
+
+.navbar-default {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0 -15px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #777;
+	padding: 0 15px;
+	line-height: 80px;
+}
+
+.yamm-fw .yamm-content a {
+	height: 15px;
+	border-top: medium none;
+	border-bottom: medium none;
+	position: relative;
+	transition: background-color 0.2s ease 0s, border 0.2s ease 0s, height 0.3s ease 0s, color 0.2s ease 0s, opacity 0.5s ease 0s;
+	padding: 0px 5px;
+	margin: 0;
+	line-height: 0 !important;
+	font-size: 14px;
+	color: #A8ACAF;
+}
+
+.megamenu li .mmenu-title {
+	padding: 5px;
+	color: #FFF !important;
+	font-size: 14px !important;
+	font-style: normal;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background: #2F3338;
+}
+
+.yamm-fw5 .yamm-content .col-sm-3 {
+	width: 20%;
+}
+
+.dropdown-submenu {
+	position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+	top: 0;
+	left: 100% !important;
+	border-top: none !important;
+	background: #2F3338;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+}
+
+.dropdown-submenu.pull-left {
+	float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+	left: -100% !important;
+	margin-left: 10px;
+	border-radius: 0px 0px 2px 2px;
+}
+
+.yamm-fw .dropdown-menu {
+	max-width: 995px !important;
+	margin-left: 17px !important;
+}
+
